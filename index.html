@@ -412,25 +412,26 @@
     </div>
   </section>
 
-  <section id="interactive">
-    <h2 class="section-title">Interactive Section</h2>
-    <div class="interactive-box">
-      <p class="intro-text">
-        Move the slider to compare the ocean before and after pollution. This simple interaction helps
-        users visualize how human actions affect marine life and why sustainable behavior matters.
-      </p>
+ <section id="interactive">
+    <h2>Interactive</h2>
 
-      <div class="slider-container">
-        <h3>Before / After Pollution Image</h3>
-        <div id="compareImage" class="compare-image"
-          style="background-image: url('[images.unsplash.com](https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80)');">
-        </div>
-        <input type="range" id="pollutionSlider" min="0" max="100" value="0">
-        <p id="sliderText">Status: Clean Ocean 🌊</p>
-      </div>
+    <div style="position: relative; width: 100%; height: 500px; overflow: hidden; border-radius: 10px;">
+    
+      <div style="position: absolute; width: 100%; height: 100%; background-image: url('https://images.theconversation.com/files/178220/original/file-20170714-14254-10i1c3m.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=1000&fit=clip'); background-size: cover; background-position: center;"></div>
+
+      <div id="compareImage" style="position: absolute; width: 100%; height: 100%; background-image: url('https://images.theconversation.com/files/178221/original/file-20170714-14287-8jwo9p.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=1000&fit=clip'); background-size: cover; background-position: center; clip-path: inset(0 100% 0 0); border-right: 2px solid white;"></div>
+    
     </div>
-  </section>
 
+    <input type="range" id="slider" min="0" max="100" value="0" style="width: 100%; margin-top: 15px;"
+      oninput="
+        const val = this.value;
+        document.getElementById('compareImage').style.clipPath = 'inset(0 ' + (100 - val) + '% 0 0)';
+        document.getElementById('text').innerText = val > 50 ? 'Clean Ocean 🌊' : 'Polluted Ocean 🗑️';
+      ">
+
+    <p id="text">Polluted Ocean 🗑️</p>
+  </section>
   <section id="quiz">
     <h2 class="section-title">Ocean Protection Quiz</h2>
     <div class="quiz-box">
@@ -503,11 +504,11 @@
     slider.addEventListener("input", function () {
       if (slider.value < 50) {
         compareImage.style.backgroundImage =
-          "url('[images.unsplash.com](https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80)')";
+          "url('https://images.theconversation.com/files/178220/original/file-20170714-14254-10i1c3m.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=1000&fit=clip')";
         sliderText.innerHTML = "Status: Clean Ocean 🌊";
       } else {
         compareImage.style.backgroundImage =
-          "url('[images.unsplash.com](https://images.unsplash.com/photo-1618477462146-050d2767eac4?auto=format&fit=crop&w=1400&q=80)')";
+          "url('https://images.theconversation.com/files/178221/original/file-20170714-14287-8jwo9p.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=1000&fit=clip')";
         sliderText.innerHTML = "Status: Polluted Ocean 🗑️";
       }
     });
