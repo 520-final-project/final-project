@@ -432,30 +432,24 @@
 
     <p id="text">Polluted Ocean 🗑️</p>
   </section>
-  <section id="quiz">
-    <h2 class="section-title">Ocean Protection Quiz</h2>
-    <div class="quiz-box">
-      <h3>Which action best supports SDG 12 and SDG 14?</h3>
+<section id="quiz">
+  <h2 class="section-title">Ocean Protection Quiz</h2>
+  
+  <!-- 測驗進度顯示 -->
+  <p id="quiz-progress" style="text-align:center; color:#666; margin-bottom: 10px;"></p>
 
-      <div class="quiz-option" onclick="checkAnswer(false)">
-        Throwing plastic into any bin without sorting
-      </div>
+  <div class="quiz-box" id="quiz-container">
+    <!-- JavaScript 會在這裡動態產生題目 -->
+  </div>
 
-      <div class="quiz-option" onclick="checkAnswer(true)">
-        Reducing single-use plastic and choosing sustainable products
-      </div>
-
-      <div class="quiz-option" onclick="checkAnswer(false)">
-        Buying more packaged products for convenience
-      </div>
-
-      <div class="quiz-option" onclick="checkAnswer(false)">
-        Ignoring ocean pollution because it starts on land
-      </div>
-
-      <p id="quiz-result"></p>
-    </div>
-  </section>
+  <!-- 結果顯示區 (預設隱藏) -->
+  <div id="quiz-summary" class="quiz-box" style="display:none;">
+    <h3 id="final-score-title">Quiz Completed!</h3>
+    <p id="final-score-text" style="font-size: 28px; font-weight: bold; color: #0077b6; text-align: center; margin: 20px 0;"></p>
+    <p id="feedback-message" style="text-align: center; margin-bottom: 20px;"></p>
+    <button onclick="OceanQuiz.init()" class="quiz-option" style="text-align:center; width:100%; background:#0077b6; color:white;">Try Again</button>
+  </div>
+</section>
 
   <section id="animation" class="animation-section">
     <h2 class="section-title">Ocean Animation</h2>
