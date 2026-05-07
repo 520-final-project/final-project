@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — OceanWise</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
 
+<nav>
+  <a href="index.html" class="nav-logo">Ocean<span>Wise</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="game.html">Game</a></li>
+    <li><a href="quiz.html" class="active">Quiz</a></li>
+    <li><a href="aboutus.html">About Us</a></li>
+  </ul>
+  <div class="nav-burger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-tag">10 Questions · SDG 12 & 14</div>
+  <h1 class="page-title">🧠 Test Your <span class="accent">Knowledge</span></h1>
+  <p class="page-subtitle">How much do you know about ocean health and sustainable consumption? Answer all 10 questions to find out!</p>
+</div>
+
+<div class="content">
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <!-- Quiz body -->
+  <div id="quiz-body">
+    <div class="quiz-meta">
+      <span class="q-counter" id="qNum">Question 1 of 10</span>
+      <span class="q-score-live" id="qScoreLive">Score: 0</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+    <div class="quiz-card" id="quizCard">
+      <div class="quiz-q" id="qText"></div>
+      <div class="options" id="qOptions"></div>
+      <div class="feedback" id="qFeedback"></div>
+    </div>
+
+    <button class="btn-next" id="btnNext" onclick="nextQuestion()">Next Question →</button>
+  </div>
+
+  <!-- Result -->
+  <div id="quiz-result">
+    <div class="result-card" id="resultCard">
+      <div class="r-emoji" id="rEmoji"></div>
+      <div class="r-title" id="rTitle"></div>
+      <div class="r-score" id="rScore"></div>
+      <div class="score-breakdown">
+        <div class="sb-item correct"><div class="sb-num" id="sbCorrect">0</div><div class="sb-label">✅ Correct</div></div>
+        <div class="sb-item wrong"><div class="sb-num" id="sbWrong">0</div><div class="sb-label">❌ Wrong</div></div>
+        <div class="sb-item"><div class="sb-num" id="sbPct" style="color:var(--ocean-cyan)">0%</div><div class="sb-label">Accuracy</div></div>
+      </div>
+      <div class="r-msg" id="rMsg"></div>
+      <div class="r-actions">
+        <button class="btn-restart" onclick="restartQuiz()">↺ Try Again</button>
+        <a href="about.html" class="btn-goto">📖 Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Made with 💙 for the planet &nbsp;|&nbsp; <strong>SDG 12 + SDG 14</strong> Final Project &nbsp;|&nbsp; OceanWise 2025</p>
+</footer>
+
+<script scr="quiz.js"></script>
+</body>
+</html>
