@@ -5,7 +5,7 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'DM Sans',sans-serif; background:var(--ocean-deep); color:var(--white); overflow-x:hidden; }
-
+ 
   nav {
     position:fixed; top:0; width:100%; z-index:1000;
     background:rgba(3,25,46,0.88); backdrop-filter:blur(14px);
@@ -22,7 +22,7 @@
   .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
   .nav-burger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
   .nav-burger span { width:26px; height:2px; background:var(--ocean-cyan); border-radius:2px; }
-
+ 
   .page-hero {
     padding:120px 5% 50px; text-align:center;
     background:linear-gradient(180deg,#041e35 0%,var(--ocean-deep) 100%);
@@ -37,11 +37,11 @@
   .page-title { font-family:'Syne',sans-serif; font-size:clamp(2.2rem,5vw,3.5rem); font-weight:800; line-height:1.1; margin-bottom:1rem; }
   .page-title .accent { color:var(--ocean-cyan); }
   .page-subtitle { font-size:1rem; color:var(--text-light); max-width:580px; margin:0 auto; line-height:1.7; font-weight:300; }
-
+ 
   .content { max-width:900px; margin:0 auto; padding:50px 5%; }
   .back-link { display:inline-flex; align-items:center; gap:.4rem; color:var(--ocean-cyan); text-decoration:none; font-size:.88rem; font-weight:600; margin-bottom:2rem; transition:gap .2s; }
   .back-link:hover { gap:.8rem; }
-
+ 
   /* How to play */
   .how-to-play {
     background:rgba(10,61,98,0.35); border:1px solid rgba(23,195,178,0.2);
@@ -53,7 +53,7 @@
   .htp-icon { font-size:1.4rem; flex-shrink:0; }
   .htp-text { font-size:.85rem; color:var(--text-light); line-height:1.5; }
   .htp-text strong { color:var(--white); }
-
+ 
   /* Game area */
   #game-area {
     background:rgba(10,61,98,0.4); border:1px solid rgba(23,195,178,0.3);
@@ -70,7 +70,7 @@
   .hud-item.timer .hud-val { color:var(--coral-light); }
   .hud-item.timer.urgent .hud-val { color:var(--coral); animation:pulse .5s ease infinite; }
   @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.1)} }
-
+ 
   #ocean-grid {
     display:grid; grid-template-columns:repeat(8,1fr);
     gap:7px; margin-bottom:1.5rem;
@@ -88,7 +88,7 @@
   .ocean-cell.fish { background:rgba(23,195,178,0.15); border-color:rgba(23,195,178,0.25); }
   .ocean-cell.pop { animation:cellPop .2s ease; }
   @keyframes cellPop { 0%,100%{transform:scale(1)} 40%{transform:scale(.7)} }
-
+ 
   .game-controls { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:.5rem; }
   .btn-game {
     padding:.7rem 1.8rem; border-radius:50px;
@@ -99,14 +99,14 @@
   .btn-reset { background:rgba(255,107,107,0.15); color:var(--coral); border:1.5px solid var(--coral); }
   .btn-game:hover { transform:translateY(-2px); }
   .btn-game:disabled { opacity:.38; cursor:not-allowed; transform:none; }
-
+ 
   #game-msg {
     text-align:center; min-height:1.6rem;
     font-size:1rem; color:var(--ocean-cyan); font-weight:600; margin-top:1rem;
     transition:color .3s;
   }
   #game-msg.bad { color:var(--coral); }
-
+ 
   /* Score history */
   .best-score {
     background:rgba(10,61,98,0.25); border:1px solid rgba(23,195,178,0.15);
@@ -114,7 +114,7 @@
   }
   .best-score .label { font-size:.78rem; color:var(--text-light); letter-spacing:1px; text-transform:uppercase; }
   .best-score .val { font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:var(--ocean-cyan); }
-
+ 
   /* Fun facts */
   .facts-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-top:2rem; }
   .fact-card {
@@ -123,14 +123,14 @@
   }
   .fact-card .fi { font-size:1.6rem; margin-bottom:.5rem; }
   .fact-card p { font-size:.84rem; color:var(--text-light); line-height:1.6; }
-
+ 
   footer { background:rgba(0,0,0,0.3); text-align:center; padding:2rem; font-size:.82rem; color:var(--text-light); border-top:1px solid rgba(23,195,178,0.1); margin-top:3rem; }
   footer strong { color:var(--ocean-cyan); }
-
+ 
   ::-webkit-scrollbar { width:6px; }
   ::-webkit-scrollbar-track { background:var(--ocean-deep); }
   ::-webkit-scrollbar-thumb { background:var(--ocean-teal); border-radius:3px; }
-
+ 
   @media (max-width:640px) {
     .nav-links { display:none; flex-direction:column; position:absolute; top:64px; left:0; width:100%; background:rgba(3,25,46,.97); padding:1rem; gap:1rem; }
     .nav-links.open { display:flex; }
