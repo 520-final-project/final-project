@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Game — OceanWise</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="game.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game — OceanWise</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <!-- CSS linked in <head> -->
+  <link rel="stylesheet" href="game.css">
 </head>
 <body>
 
@@ -32,7 +33,6 @@
 <div class="content">
   <a href="index.html" class="back-link">← Back to Home</a>
 
-  <!-- How to play -->
   <div class="how-to-play">
     <div class="htp-title">📖 How to Play</div>
     <div class="htp-item"><div class="htp-icon">🛍️</div><div class="htp-text"><strong>Click trash</strong> items to clean them up. Each piece removed earns <strong style="color:#17c3b2">+10 pts</strong>.</div></div>
@@ -41,13 +41,11 @@
     <div class="htp-item"><div class="htp-icon">🏆</div><div class="htp-text">Score <strong>100+ pts</strong> to become an Ocean Hero. Can you beat your personal best?</div></div>
   </div>
 
-  <!-- Best score display -->
   <div class="best-score">
     <div class="label">🏅 Personal Best</div>
     <div class="val" id="bestDisplay">—</div>
   </div>
 
-  <!-- Game -->
   <div id="game-area">
     <div class="game-hud">
       <div class="hud-item"><div class="hud-val" id="g-score">0</div><div class="hud-label">Score</div></div>
@@ -62,13 +60,12 @@
     <div id="game-msg">Press Start to clean the ocean! 🌊</div>
   </div>
 
-  <!-- Did you know -->
   <div style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;margin-bottom:1rem;">Did You Know? 🐢</div>
   <div class="facts-grid">
-    <div class="fact-card"><div class="fi">🛍️</div><p>A plastic bag can take <strong>500 years</strong> to decompose in the ocean, breaking into microplastics that never fully disappear.</p></div>
-    <div class="fact-card"><div class="fi">🐢</div><p>Sea turtles often mistake plastic bags for jellyfish. Ingesting just a single piece of plastic has a <strong>22% chance of killing</strong> a sea turtle.</p></div>
-    <div class="fact-card"><div class="fi">🌀</div><p>The Great Pacific Garbage Patch is now <strong>twice the size of Texas</strong> — an accumulation of 1.8 trillion pieces of plastic.</p></div>
-    <div class="fact-card"><div class="fi">🍽️</div><p>Humans may be ingesting up to <strong>5 grams of microplastic</strong> per week — roughly the weight of a credit card.</p></div>
+    <div class="fact-card"><div class="fi">🛍️</div><p>A plastic bag can take <strong>500 years</strong> to decompose in the ocean.</p></div>
+    <div class="fact-card"><div class="fi">🐢</div><p>Ingesting just one piece of plastic has a <strong>22% chance of killing</strong> a sea turtle.</p></div>
+    <div class="fact-card"><div class="fi">🌀</div><p>The Great Pacific Garbage Patch is <strong>twice the size of Texas</strong>.</p></div>
+    <div class="fact-card"><div class="fi">🍽️</div><p>Humans may ingest up to <strong>5 grams of microplastic</strong> per week.</p></div>
   </div>
 </div>
 
@@ -76,6 +73,7 @@
   <p>Made with 💙 for the planet &nbsp;|&nbsp; <strong>SDG 12 + SDG 14</strong> Final Project &nbsp;|&nbsp; OceanWise 2025</p>
 </footer>
 
-<script scr="game.js"></script>
+<!-- JS at bottom of body so all HTML elements exist when script runs -->
+<script src="game.js"></script>
 </body>
 </html>
