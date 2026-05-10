@@ -80,7 +80,7 @@
   .sdg-t { font-size:.8rem; color:var(--text-light); display:flex; gap:.5rem; }
   .sdg-t::before { content:'→'; color:var(--ocean-cyan); flex-shrink:0; }
   .sdg-card.card14 .sdg-t::before { color:var(--coral); }
-
+/*Team*/
   .team-grid {
   display:flex; gap:1.5rem; flex-wrap:wrap;
   justify-content:center; margin:2rem 0 4rem;
@@ -100,6 +100,7 @@
   transform:translateY(-8px) scale(1.02);
 }
 .avatar {
+  background:none;border:none;
   width:80px;height:80px;border-radius:50%;margin:0 auto 1rem;
   display:flex; align-items:center;justify-content:center;
   font-size:2.6rem;background:none;border:none;
