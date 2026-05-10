@@ -50,11 +50,11 @@
   }
   .badge.coral { border-color:var(--coral); color:var(--coral); background:rgba(255,107,107,0.1); }
  
-  .home-title {
-    font-family:'Syne',sans-serif;
-    font-size:clamp(2.8rem,7vw,5.5rem);
-    font-weight:800; line-height:1.05; margin-bottom:1.2rem;
-  }
+.home-title {
+  font-family:'Syne',sans-serif;
+  font-size: calc(clamp(2.8rem, 7vw, 5.5rem) * 0.7);
+  font-weight:800; line-height:1.05; margin-bottom:1.2rem;
+}
   .home-title .accent { color:var(--ocean-cyan); }
   .home-title .accent2 { color:var(--coral); }
  
