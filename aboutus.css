@@ -101,9 +101,9 @@
 }
 .avatar {
   background:none;border:none;
-  width:80px;height:80px;border-radius:50%;margin:0 auto 1rem;
+  width:150px;height:150px;border-radius:50%;margin:0 auto 1rem;
   display:flex; align-items:center;justify-content:center;
-  font-size:2.6rem;background:none;border:none;
+  font-size:5rem;background:none;border:none;
 }
   .avatar-photo {
     padding: 0;
