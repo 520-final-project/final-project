@@ -52,7 +52,7 @@
  
 .home-title {
   font-family:'Syne',sans-serif;
-  font-size: calc(clamp(2.8rem, 7vw, 5.5rem) * 0.7);
+  font-size: calc(clamp(2.8rem, 7vw, 5.5rem) * 0.85);
   font-weight:800; line-height:1.05; margin-bottom:1.2rem;
 }
   .home-title .accent { color:var(--ocean-cyan); }
