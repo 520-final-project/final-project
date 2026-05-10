@@ -82,8 +82,9 @@
   .ocean-illustration { width:100%; height:240px; display:flex; align-items:center; justify-content:center; font-size:4.5rem; position:relative; flex-wrap:wrap; gap:.5rem; padding:0rem; overflow:hidden; }
   .ocean-illustration img {
       width: 100%;
-      height: 100%;
+      height: 240px;
       object-fit: cover;
+      display:block;
    }
   .ocean-clean { background:linear-gradient(160deg,#0a3d62,#17c3b2,#a8edea); }
   .ocean-dirty { background:linear-gradient(160deg,#1a0a0a,#5a2020,#8b4513); }
