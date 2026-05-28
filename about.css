@@ -75,7 +75,12 @@
   .divider { border:none; border-top:1px solid rgba(23,195,178,0.12); margin:3rem 0; }
 
   /* Compare */
-  .compare-wrap { display:flex; gap:1.5rem; flex-wrap:wrap; margin:2rem 0 4rem; }
+  .compare-wrap {
+      display: flex;         /* 啟用 Flexbox 佈局，讓子元素預設橫向排列 */
+      gap: 20px;            /* 設定左右卡片之間的間距（可依需求調整） */
+      justify-content: center; /* 讓卡片在畫面中間對齊 */
+      align-items: stretch; /* 讓兩張卡片的高度自動保持一致 */
+  }
   .compare-card { flex:1; min-width:270px; border-radius:18px; overflow:hidden; border:2px solid transparent; }
   .compare-card.clean { border-color:var(--ocean-cyan); }
   .compare-card.dirty { border-color:var(--coral); }
