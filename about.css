@@ -77,7 +77,7 @@
   /* Compare */
   .compare-wrap {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       gap: 25px; 
       align-items: center;
       width:100%;
