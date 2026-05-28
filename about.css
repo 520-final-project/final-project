@@ -76,12 +76,13 @@
 
   /* Compare */
   .compare-wrap {
-      display: flex;         /* 啟用 Flexbox 佈局，讓子元素預設橫向排列 */
-      gap: 20px;            /* 設定左右卡片之間的間距（可依需求調整） */
-      justify-content: center; /* 讓卡片在畫面中間對齊 */
-      align-items: stretch; /* 讓兩張卡片的高度自動保持一致 */
+      display: flex;
+      flex-direction: column;
+      gap: 20px; 
+      justify-content: center;
+      align-items: center;
   }
-  .compare-card { flex:1; min-width:270px; border-radius:18px; overflow:hidden; border:2px solid transparent; }
+  .compare-card { flex:1; width: 100%; min-width:270px; border-radius:18px; overflow:hidden; border:2px solid transparent; }
   .compare-card.clean { border-color:var(--ocean-cyan); }
   .compare-card.dirty { border-color:var(--coral); }
   .ocean-illustration { width:100%; height:240px; display:flex; align-items:center; justify-content:center; font-size:4.5rem; position:relative; flex-wrap:wrap; gap:.5rem; padding:0rem; overflow:hidden; }
