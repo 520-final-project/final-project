@@ -77,9 +77,10 @@
   /* Compare */
   .compare-wrap {
       display: flex;
-      flex-direction: column;
+      flex-direction: row; 
+      justify-content: center;  
       gap: 25px; 
-      align-items: center;
+      align-items: stretch;   
       width:100%;
   }
   .compare-card {
@@ -162,4 +163,6 @@
     .nav-links { display:none; flex-direction:column; position:absolute; top:64px; left:0; width:100%; background:rgba(3,25,46,.97); padding:1rem; gap:1rem; }
     .nav-links.open { display:flex; }
     .nav-burger { display:flex; }
+      
+    .compare-wrap { flex-direction: column; }
   }
