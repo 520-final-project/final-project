@@ -1,3 +1,156 @@
+const allQuestions = [
+  {
+    q: "How much plastic waste enters the ocean every year?",
+    opts: ["1 million tonnes", "5 million tonnes", "11 million tonnes", "20 million tonnes"],
+    ans: 2,
+    fact: "An estimated 11 million metric tons of plastic flow into the ocean annually — equivalent to dumping a garbage truck of plastic every single minute."
+  },
+  {
+    q: "What percentage of the world's oxygen is produced by ocean phytoplankton?",
+    opts: ["10%", "30%", "50%", "70%"],
+    ans: 2,
+    fact: "Ocean phytoplankton produces about 50% of Earth's oxygen through photosynthesis — making healthy oceans essential to all life on land too."
+  },
+  {
+    q: "Which UN Sustainable Development Goal focuses on 'Life Below Water'?",
+    opts: ["SDG 6", "SDG 12", "SDG 14", "SDG 17"],
+    ans: 2,
+    fact: "SDG 14 calls for the conservation and sustainable use of the oceans, seas, and marine resources — protecting everything from coral reefs to deep-sea ecosystems."
+  },
+  {
+    q: "Approximately how long does a plastic bottle take to decompose in the ocean?",
+    opts: ["10 years", "50 years", "200 years", "450 years"],
+    ans: 3,
+    fact: "A plastic bottle can take up to 450 years to fully decompose, leaching harmful chemicals and breaking into microplastics throughout its degradation."
+  },
+  {
+    q: "What does SDG 12 stand for?",
+    opts: ["Sustainable Cities & Communities", "Climate Action", "Responsible Consumption & Production", "Affordable & Clean Energy"],
+    ans: 2,
+    fact: "SDG 12 aims to ensure sustainable consumption and production patterns globally — reshaping how we make, use, and dispose of everything from food to electronics."
+  },
+  {
+    q: "What percentage of shallow-water coral reefs have been lost in the last 30 years?",
+    opts: ["10%", "25%", "50%", "75%"],
+    ans: 2,
+    fact: "Around 50% of shallow-water coral reefs have been lost since the 1950s, driven by warming waters, ocean acidification, and destructive human activities."
+  },
+  {
+    q: "Which of the following is NOT a solution for reducing ocean plastic pollution?",
+    opts: ["Using reusable bags and bottles", "Buying more fast fashion clothing", "Joining beach clean-up events", "Supporting plastic reduction policies"],
+    ans: 1,
+    fact: "Fast fashion is a major source of microplastic pollution — every synthetic garment wash releases thousands of plastic fibres that flow into our waterways and oceans."
+  },
+  {
+    q: "How much of global CO₂ emissions does the ocean absorb?",
+    opts: ["10%", "20%", "30%", "50%"],
+    ans: 2,
+    fact: "The ocean absorbs about 30% of the CO₂ humans produce, acting as a vital carbon sink. The downside is ocean acidification, which harms shellfish and coral."
+  },
+  {
+    q: "What fraction of the world's fish stocks are being fished at unsustainable levels?",
+    opts: ["1 in 10", "1 in 5", "1 in 3", "1 in 2"],
+    ans: 2,
+    fact: "According to the FAO, over 34% — roughly 1 in 3 — of the world's fish stocks are exploited at biologically unsustainable levels, threatening food security for billions."
+  },
+  {
+    q: "Which daily action has the LEAST direct impact on ocean health?",
+    opts: ["Reducing seafood consumption", "Changing your phone wallpaper", "Refusing single-use plastics", "Supporting marine protection legislation"],
+    ans: 1,
+    fact: "Changing your phone wallpaper has virtually zero environmental impact. The other actions — eating less seafood, refusing plastics, and advocating for policy — each directly reduce ocean stress."
+  },
+  {
+    q: "What are 'microplastics' defined as?",
+    opts: ["Plastic pieces larger than 10cm", "Plastic pieces smaller than 5mm", "Biodegradable organic compounds", "Natural sand particles mixed with glass"],
+    ans: 1,
+    fact: "Microplastics are tiny plastic particles less than 5 millimetres long, which easily bypass water filtration systems and end up being swallowed by marine life."
+  },
+  {
+    q: "Which large accumulation of ocean debris is located between California and Hawaii?",
+    opts: ["The Atlantic Garbage Patch", "The Great Pacific Garbage Patch", "The Indian Ocean Trash Vortex", "The Caribbean Plastic Reef"],
+    ans: 1,
+    fact: "The Great Pacific Garbage Patch is a massive collection of marine debris in the North Pacific Ocean, spanning an area twice the size of Texas."
+  },
+  {
+    q: "What is the primary cause of ocean acidification?",
+    opts: ["Oil spills from cargo ships", "Excessive carbon dioxide (CO2) absorption", "Agricultural fertilizer runoff", "Thermal pollution from power plants"],
+    ans: 1,
+    fact: "When the ocean absorbs excess CO2 from burning fossil fuels, a chemical reaction occurs that lowers the pH of the water, making it more acidic."
+  },
+  {
+    q: "Ghost fishing occurs when marine life is trapped by what?",
+    opts: ["Abandoned or lost commercial fishing gear", "Natural underwater seaweed tangles", "Submarine acoustic tracking sonar", "Artificial coral reef structures"],
+    ans: 0,
+    fact: "Ghost fishing gear refers to commercial nets, lines, and traps that are lost or abandoned at sea, continuing to trap and kill marine wildlife indefinitely."
+  },
+  {
+    q: "What phenomenon causes coral reefs to turn completely white and lose their algae?",
+    opts: ["Coral bleaching", "Coral calcification", "Photosynthetic mutation", "Marine desalinization"],
+    ans: 0,
+    fact: "When ocean temperatures get too warm, corals expel the symbiotic algae living in their tissues, causing them to turn completely white and risk starvation."
+  },
+  {
+    q: "Which heavy metal commonly bioaccumulates in large predatory fish like tuna?",
+    opts: ["Lead", "Copper", "Mercury", "Iron"],
+    ans: 2,
+    fact: "Mercury flows into the ocean from industrial pollution and moves up the food chain, building up in higher concentrations in long-lived predatory fish."
+  },
+  {
+    q: "What percentage of marine debris is estimated to sink to the ocean floor?",
+    opts: ["About 10%", "About 30%", "About 50%", "About 70%"],
+    ans: 3,
+    fact: "While we see trash floating on the surface, around 70% of marine litter actually sinks to the seabed, polluting deep-sea ecosystems where it is extremely difficult to clean up."
+  },
+  {
+    q: "What creates underwater 'Dead Zones' where fish cannot survive?",
+    opts: ["Lack of sunlight in the deep ocean", "Severe oxygen depletion (hypoxia)", "High levels of volcanic sound waves", "Extreme underwater water pressure"],
+    ans: 1,
+    fact: "Agricultural runoff supplies excessive nutrients like nitrogen, causing massive algal blooms. When the algae die and decompose, they strip oxygen from the water, creating dead zones."
+  },
+  {
+    q: "How do sea turtles most commonly mistake plastic bags in the water?",
+    opts: ["As floating sea sponges", "As drifting jellyfish", "As edible schools of small fish", "As floating pieces of kelp"],
+    ans: 1,
+    fact: "Sea turtles are visually guided predators, and a floating translucent plastic bag looks exactly like a swimming jellyfish, leading to fatal blockages when ingested."
+  },
+  {
+    q: "Which product category is a major contributor to primary microplastic pollution through sewage?",
+    opts: ["Aluminium beverage cans", "Cosmetics containing microbeads", "Cardboard packaging boxes", "Glass cleaning solutions"],
+    ans: 1,
+    fact: "Many facial scrubs and toothpastes historically used plastic microbeads for exfoliation. When washed down the drain, they easily pass into marine environments."
+  },
+  {
+    q: "What is the main source of oil pollution in the ocean annually?",
+    opts: ["Major oil tanker accidents", "Natural deep-sea volcanic eruptions", "Land-based runoff and routine ship operations", "Offshore drilling rig explosions"],
+    ans: 2,
+    fact: "While catastrophic tanker spills get the most media attention, the largest source of oil pollution actually comes from regular land-based street runoff and industrial drainage."
+  },
+  {
+    q: "Why is noise pollution dangerous to marine mammals like whales and dolphins?",
+    opts: ["It damages their physical scales", "It disrupts their echolocation and communication", "It decreases the salt level of sea water", "It causes underwater plants to wither"],
+    ans: 1,
+    fact: "Whales and dolphins rely heavily on sound (echolocation) to navigate, find food, and communicate. Industrial shipping and sonar noise can blind them acoustically."
+  },
+  {
+    q: "How does marine plastic pollution affect human health?",
+    opts: ["By lowering global oxygen levels directly", "Through toxins entering the seafood supply chain", "By increasing the temperature of drinking water", "By creating acidic rain clouds above coastlines"],
+    ans: 1,
+    fact: "Microplastics absorb toxic chemicals in the ocean. When fish consume these plastics, those toxins can bioaccumulate up the food chain, eventually reaching humans who eat seafood."
+  },
+  {
+    q: "What percentage of global wastewater is discharged into the world's oceans untreated?",
+    opts: ["Less than 10%", "Around 30%", "Around 50%", "Over 80%"],
+    ans: 3,
+    fact: "According to the UN, over 80% of global wastewater flows back into the ecosystem and oceans without being treated or cleaned first, carrying pathogens and toxins."
+  },
+  {
+    q: "What is the primary objective of marine protected areas (MPAs)?",
+    opts: ["To build underwater tourism resorts", "To completely stop ocean wave movement", "To conserve marine biodiversity and habitats", "To increase international shipping lanes"],
+    ans: 2,
+    fact: "Marine Protected Areas (MPAs) restrict human activity for conservation purposes, allowing overfished species to recover and protecting delicate habitats from destruction."
+  }
+];
+let questions = [];
 const questions = [
   { q:"How much plastic waste enters the ocean every year?", opts:["1 million tonnes","5 million tonnes","11 million tonnes","20 million tonnes"], ans:2, fact:"An estimated 11 million metric tons of plastic flow into the ocean annually — equivalent to dumping a garbage truck of plastic every single minute." },
   { q:"What percentage of the world's oxygen is produced by ocean phytoplankton?", opts:["10%","30%","50%","70%"], ans:2, fact:"Ocean phytoplankton produces about 50% of Earth's oxygen through photosynthesis — making healthy oceans essential to all life on land too." },
@@ -13,6 +166,33 @@ const questions = [
 
 let qIndex=0, qScore=0, qWrong=0, answered=false;
 const LETTERS=['A','B','C','D'];
+
+function selectRandomQuestions() {
+    // 複製一份題庫，避免影響原始資料
+    let shuffled = [...allQuestions];
+    
+    // Fisher-Yates 洗牌演算法 (最公平的隨機法)
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
+    // 取出前 10 題存入活動題庫
+    questions = shuffled.slice(0, 10);
+}
+
+// 初始化遊戲
+function initQuiz() {
+    qIndex = 0;
+    qscore = 0;
+    qWrong = 0;
+    
+    selectRandomQuestions(); // 先抽出 10 題
+    renderQ();                // 再渲染畫面
+}
+
+// 執行初始化
+//initQuiz();
 
 function renderQ() {
   const q=questions[qIndex]; answered=false;
@@ -96,5 +276,5 @@ function restartQuiz() {
   document.getElementById('quiz-body').style.display='block';
   renderQ();
 }
-
-renderQ();
+// 執行初始化啟動遊戲
+initQuiz();
