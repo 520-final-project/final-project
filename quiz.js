@@ -148,11 +148,13 @@ const allQuestions = [
     opts: ["To build underwater tourism resorts", "To completely stop ocean wave movement", "To conserve marine biodiversity and habitats", "To increase international shipping lanes"],
     ans: 2,
     fact: "Marine Protected Areas (MPAs) restrict human activity for conservation purposes, allowing overfished species to recover and protecting delicate habitats from destruction."
-  }
-];
-let questions = [];
-const questions = [
-  { q:"How much plastic waste enters the ocean every year?", opts:["1 million tonnes","5 million tonnes","11 million tonnes","20 million tonnes"], ans:2, fact:"An estimated 11 million metric tons of plastic flow into the ocean annually — equivalent to dumping a garbage truck of plastic every single minute." },
+  },
+  { 
+    q:"How much plastic waste enters the ocean every year?",
+    opts:["1 million tonnes","5 million tonnes","11 million tonnes","20 million tonnes"],
+    ans:2,
+    fact:"An estimated 11 million metric tons of plastic flow into the ocean annually — equivalent to dumping a garbage truck of plastic every single minute." 
+  },
   { q:"What percentage of the world's oxygen is produced by ocean phytoplankton?", opts:["10%","30%","50%","70%"], ans:2, fact:"Ocean phytoplankton produces about 50% of Earth's oxygen through photosynthesis — making healthy oceans essential to all life on land too." },
   { q:"Which UN Sustainable Development Goal focuses on 'Life Below Water'?", opts:["SDG 6","SDG 12","SDG 14","SDG 17"], ans:2, fact:"SDG 14 calls for the conservation and sustainable use of the oceans, seas, and marine resources — protecting everything from coral reefs to deep-sea ecosystems." },
   { q:"Approximately how long does a plastic bottle take to decompose in the ocean?", opts:["10 years","50 years","200 years","450 years"], ans:3, fact:"A plastic bottle can take up to 450 years to fully decompose, leaching harmful chemicals and breaking into microplastics throughout its degradation." },
@@ -161,9 +163,11 @@ const questions = [
   { q:"Which of the following is NOT a solution for reducing ocean plastic pollution?", opts:["Using reusable bags and bottles","Buying more fast fashion clothing","Joining beach clean-up events","Supporting plastic reduction policies"], ans:1, fact:"Fast fashion is a major source of microplastic pollution — every synthetic garment wash releases thousands of plastic fibres that flow into our waterways and oceans." },
   { q:"How much of global CO₂ emissions does the ocean absorb?", opts:["10%","20%","30%","50%"], ans:2, fact:"The ocean absorbs about 30% of the CO₂ humans produce, acting as a vital carbon sink. The downside is ocean acidification, which harms shellfish and coral." },
   { q:"What fraction of the world's fish stocks are being fished at unsustainable levels?", opts:["1 in 10","1 in 5","1 in 3","1 in 2"], ans:2, fact:"According to the FAO, over 34% — roughly 1 in 3 — of the world's fish stocks are exploited at biologically unsustainable levels, threatening food security for billions." },
-  { q:"Which daily action has the LEAST direct impact on ocean health?", opts:["Reducing seafood consumption","Changing your phone wallpaper","Refusing single-use plastics","Supporting marine protection legislation"], ans:1, fact:"Changing your phone wallpaper has virtually zero environmental impact. The other actions — eating less seafood, refusing plastics, and advocating for policy — each directly reduce ocean stress." }
+  { q:"Which daily action has the LEAST direct impact on ocean health?", opts:["Reducing seafood consumption","Changing your phone wallpaper","Refusing single-use plastics","Supporting marine protection legislation"], ans:1, fact:"Changing your phone wallpaper has virtually zero environmental impact. The other actions — eating less seafood, refusing plastics, and advocating for policy — each directly reduce ocean stress." },
+
 ];
 
+let questions = [];
 let qIndex=0, qScore=0, qWrong=0, answered=false;
 const LETTERS=['A','B','C','D'];
 
@@ -184,7 +188,7 @@ function selectRandomQuestions() {
 // 初始化遊戲
 function initQuiz() {
     qIndex = 0;
-    qscore = 0;
+    qScore = 0;
     qWrong = 0;
     
     selectRandomQuestions(); // 先抽出 10 題
